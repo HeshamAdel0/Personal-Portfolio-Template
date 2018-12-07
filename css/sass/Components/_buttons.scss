@@ -1,0 +1,51 @@
+//- My - Buttons
+  //- when this is {Buttons} Add Class ( bot & inside ) in your HTML OR Pugjs Code
+  //-  Example {PUGJS- CODE}: 
+//-     button.my-but1.bot(type="button") my work 
+//-         .inside my work
+//-        button.my-but2.bot(type="button") hire me
+//-         .inside hire me
+//- in File sass Add: @extend .mywebsite-buttons1;
+//- And You Can Change Any { Argument } in Class If You Need
+   //-  Start Buttons 1
+.mywebsite-buttons1 {
+	button {
+		width: 15%;
+		height: 35px;
+		text-align: center;
+		margin-top: 50px;
+		margin-right: 20px;
+		text-transform: uppercase;
+		font-family: $main-font;
+		font-weight: 300;
+		background-color: transparent;
+        position: relative;
+        @include prefixer(border,1px solid $third-color);
+        @include prefixer(border-radius,25px);
+        @include prefixer(transition,all 0.5s ease);
+		cursor: pointer;
+	}
+	.bot {
+		border-color: $third-color;
+        overflow:hidden;
+        color: $sacond-color;
+		.inside {
+			background-color: $third-color;
+			width: 100%;
+			height: 20px;
+			position: absolute;
+			left: -135px;
+            @include prefixer(transform,rotateZ(45deg));
+		}
+		&:hover {
+			background-color: $sacond-color;
+            border-color: $third-color;
+            color: $third-color;
+			.inside {
+                @include prefixer(transition,all 0.6s ease);
+				left: 135px;
+			}
+		}
+	}
+}
+        //-  End Buttons 1

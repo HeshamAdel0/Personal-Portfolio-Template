@@ -1,0 +1,75 @@
+//- Start Slider
+.slider {
+    background-color: $mian-color;
+    .carousel-inner {
+       .overlay {
+           @include Overlay($overlay-color,.6);
+           z-index:2;
+       }
+   }
+   .carousel-item{
+       @include prefixer (background-size,cover);
+   }
+   .carousel-one{
+       background-image: url(../img/home-img1.jpg);
+    }
+   .carousel-two {
+       background-image: url(../img/home-img2.jpg);
+   }
+   .carousel-three {
+       background-image: url(../img/home-img3.jpeg);
+   }
+   .carousel-indicators{
+       li {
+           width: 10px;
+           height: 10px;
+           background-color: $third-color;
+           @include prefixer(border-radius,50%);
+       }
+       .active {
+           background-color: $sacond-color;
+       }
+   } 
+   
+}
+//- End Slider
+//- Start Header
+.my-typewrap {
+    .my-icon {
+        @extend .website-icon;
+    }
+    .carousel-caption{
+        top: 40%;
+        @include MediaQuery(desktop){
+            top: 25%;
+        }
+        .type-wrap {
+            color: $third-color;
+            margin-bottom: 20px;
+            font-size: 30px;
+            z-index: 3;
+        }
+        p {
+            line-height: 25px;
+            margin-bottom: 10px;
+            max-width: 927px;
+            text-align: center;
+            @include MediaQuery(l-desktop){
+                max-width: 69%;
+                margin-left: 17%;
+            }
+        }
+        .my-button {
+            @extend .mywebsite-buttons1;
+            button {
+                @include MediaQuery(phone){
+                    width: 37%;
+                }
+                @include MediaQuery(tablet){
+                    width: 25%;
+                }
+            }
+        }    
+    }
+}
+//- End Header

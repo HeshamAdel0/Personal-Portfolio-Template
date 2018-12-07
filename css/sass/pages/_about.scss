@@ -1,0 +1,200 @@
+.about {
+    padding: 70px 0;
+    background-color: $mian-color;
+    .about-img {
+        padding-left: 100px;
+        img{
+          max-width: 80%;
+          @include prefixer(border-radius,4%);
+          @include prefixer(box-shadow,-2px -1px 7px $sacond-color);
+        }
+    }
+    .about-me {
+        .box {
+            @include prefixer(box-sizing,border-box);
+            display: block;
+            width: 30%;
+            height: 13%;
+            margin-bottom: 20px;
+            margin-left: -42px;
+            @include MediaQuery (phone) {
+                width: 107%;
+                height: 33px;
+                text-align: right;
+                margin-bottom: 0;
+                margin-left: 40px;
+            }
+            @include MediaQuery (tablet) {
+                width: 53%;
+                height: 10%;
+            }
+            @include MediaQuery (desktop) {
+                width: 40%;
+                height: 11%;
+            }
+            @include MediaQuery (l-desktop) {
+                width: 34%;
+                height: 11%;
+            }
+        }
+        .arrow-box:after,
+        .arrow-box:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            @include MediaQuery (phone) {
+                content: none;
+            }
+          }
+        .arrow-box {
+            @include prefixer(border,1px solid $third-color);
+            position: relative;
+            padding-left: 22px;
+            padding-top: 15px;
+            @include MediaQuery (phone) {
+                @include prefixer(border,none);
+                padding-left: 0;
+                padding-top: 0;
+                margin-bottom: 20px;
+            }
+            &:after {
+                top: 100%;
+                left: 0;
+                margin-left: 3px;
+                @include prefixer(border-right,10px solid transparent);
+                @include prefixer(border-top,14px solid  $third-color);
+                @include MediaQuery(l-desktop){
+                    left: 4%;
+                }
+            }
+            &:before {
+                top: 100%;
+                left: 12%;
+                margin-left: -15px;
+                @include prefixer(border-right,10px solid transparent);
+                @include prefixer(border-top,14px solid);
+                @include prefixer(border-top-color,$third-color);
+            }
+        }
+        h3 {
+            color: $third-color;
+        }
+        p {
+            margin-right: auto;
+            margin-left: -49px;
+            line-height: 31px;
+            font-size: 17px;
+            color: $prg-color;
+            @include MediaQuery (phone) {
+                width: 210%;
+                line-height: 35px;
+                margin-right: 0;
+                margin-left: 0;
+            }
+            @include MediaQuery (tablet) {
+                font-size: 14px;
+                line-height: 29px;
+            }
+        }
+        .my-info {
+            margin-left: -101px;
+            margin-right: 34px;
+            padding-top: 10px;
+            @include MediaQuery (phone) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            @include MediaQuery (tablet) {
+                margin-right: 0;
+            }
+            span {
+                color: $sacond-color;
+                @include prefixer(border-bottom,1px solid);
+                @include MediaQuery(phone){
+                    margin-left: 61px;
+                }
+            }
+            p {
+                color: $third-color;
+            }
+            .info-span1,
+            .info-span3{
+                margin-left: 50px;
+                line-height: 36px;
+                margin-bottom: 55px;
+                span{
+                    margin-left: 32px;
+                    border-bottom: 1px solid;
+                }
+                p {
+                    margin-left: 1px; 
+                }
+            }
+            .info-span2,
+            .info-span4{
+                float: right;
+                margin-top: -122px;
+                margin-right: 69px;
+                line-height: 36px;
+                margin-bottom: 55px;
+                @include MediaQuery(phone){
+                    margin-left: 0;
+                    margin-right: -227px;
+                }
+            }
+            .info-span4 {
+                margin-right: 105px;
+                padding-top: 1px;
+                @include MediaQuery(phone){
+                    margin-right: -187px;
+                }
+                p {
+                    padding-left: 31px;
+                }
+            }
+        }
+        .boutton-about {
+            @extend .mywebsite-buttons1;
+            padding: 0;
+            button {
+                width: 23%;
+                margin-top: 10px;
+                margin-right: -32px;
+                margin-left: 90px;
+                @include MediaQuery(phone){
+                    width: 154%;
+                    height: 50px;
+                    margin-top: 12px;
+                    margin-right: 0;
+                    margin-left: 181px;
+                    margin-bottom: 12px;
+                }
+                @include MediaQuery (tablet) {
+                    width: 84%;
+                    margin-top: 16px;
+                    margin-right: 176px;
+                    margin-left: 0;
+                    padding-left: 4px;
+                }
+                @include MediaQuery (desktop) {
+                    width: 70%;
+                    height: 41px;
+                    margin-top: 10px;
+                    margin-right: -257px;
+                    margin-left: -167px;
+                }
+                @include MediaQuery (l-desktop) {
+                    width: 54%;
+                    height: 41px;
+                    margin-top: 10px;
+                    margin-right: -352px;
+                    margin-left: -193px;
+                }
+            }
+            
+        }
+            
+    } 
+    
+}

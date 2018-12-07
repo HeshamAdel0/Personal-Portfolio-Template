@@ -1,0 +1,127 @@
+.services {
+    padding: 70px 0 ;
+    h2 {
+        margin-bottom: 35px;
+        font-weight: bold;
+        font-size: 35px;
+    }
+    .serv-groub1 {
+        margin-bottom: 60px;
+    }
+    .serv-groub1,
+    .serv-groub2 {
+        span {
+            position: absolute;
+            background-color: $sacond-color;
+            @include prefixer(transition,.3s);
+        }
+        .b-one {
+            left: -1px;
+            top: 3px;
+            width: 6px;
+            height: 29%;
+            @include MediaQuery(phone){
+                height: 14%;
+            } 
+          }
+        .b-two {
+            top: -1px;
+            left: -1px;
+            width: 29%;
+            height: 6px; 
+          }
+        .b-three {
+            right: -1px;
+            bottom: 0px;
+            width: 5px;
+            height: 29%;
+            @include MediaQuery(phone){
+                height: 14%;
+            } 
+          }
+        .b-four{
+            bottom: -1px;
+            right: -1px;
+            width: 29%;
+            height: 5px;
+          }
+          &:hover {
+            span {
+                background-color: $third-color;
+                @include prefixer(transition-delay,.3s);
+                @include prefixer(transition-duration,.3s);
+
+            }
+        }  
+        .upper-card {
+            background-color: $mian-color;
+            color: $third-color;
+            @include prefixer(box-shadow,0 0 5px 3px #9c9c9c);
+            @include prefixer(transition,.3s);
+            .icon {
+                i {
+                    font-size: 30px;
+                    @include prefixer(border,1px solid $third-color);
+                    width: 60px;
+                    height: 60px;
+                    line-height: 60px;
+                    margin-top: 30px;
+                    @include prefixer(transition,.3s);
+                }
+            }
+            h3 {
+                padding-bottom: 12px;
+                font-size: 25px;
+                font-weight: bold;
+            }
+            p {
+                font-size: 15px;
+                font-weight: normal;
+                margin-top: 29px;
+                line-height: 1.7;
+                @include prefixer(transition,.3s);  
+            }
+            &:hover {
+                background-color: $sacond-color;
+                @include prefixer(box-shadow,0 0 10px 6px $mian-color);
+                @include prefixer(transition-delay,.3s);
+                @include prefixer(transition-duration,.3s); 
+                .icon {
+                    i {
+                        background-color: $third-color;
+                        color: $sacond-color;
+                        @include prefixer(transform,rotate(360deg));
+                        @include prefixer(transition,all 0.3s ease);
+                        @include prefixer(transition-delay,.3s);
+                        @include prefixer(transition-duration,.3s);
+                    }
+                }
+                p {
+                    color: $third-color;
+                    @include prefixer(transition-delay,.3s);
+                    @include prefixer(transition-duration,.3s);
+                }
+            }
+       }
+    }
+
+}
+.special-heading {
+    position: relative;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 53px;
+        left: 117px;
+        width: 59px;
+        @include prefixer(border-bottom,2px solid $third-color);
+        @include MediaQuery(phone){
+            top: 50px;
+            left: 70px;
+        }
+        @include MediaQuery(desktop){
+            left: 94px;
+        }
+    }
+}

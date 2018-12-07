@@ -1,0 +1,30 @@
+//- File Variables
+@import "sass/file-help/variables";
+//- File Mixin
+@import "sass/file-help/mixins";
+//- Globale File
+@import "sass/layout/globle";
+
+@import "sass/Components/icons";
+
+@import "sass/Components/buttons";
+
+//- Start My Style
+     //- Navigation Bar
+@import "sass/layout/nav-bar";
+     //- Header
+@import "sass/pages/header";
+    //- About Me
+@import "sass/pages/about";
+   //- Services
+@import "sass/pages/services";
+  //- Last News
+@import "sass/pages/lastnews";
+  //- Portfolio
+@import "sass/pages/portfolio";
+  //- Clint Say
+@import "sass/pages/clint-say";
+ //- contact
+@import "sass/pages/contact";
+//- footer
+@import "sass/layout/footer";

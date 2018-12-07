@@ -1,0 +1,62 @@
+.lastnews {
+    @include prefixer(background-size,cover);
+    background-image:url(../img/keyboard.jpg);
+    margin-bottom: 30px;
+    position: relative;
+    .overlay {
+        @include Overlay($overlay-color,.88);
+        z-index: 0;
+    }
+    .last-prag {
+        @include MediaQuery(phone){
+            text-align: center; 
+        }
+        h4 {
+            font-size: 25px;
+            font-weight: bold;
+            color: $sacond-color;
+            margin-top: 35px;
+            @include MediaQuery(tablet){
+                font-size: 20px;  
+            }
+        }
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            color: $third-color;
+            @include MediaQuery(tablet){
+                font-size: 14px;  
+            }
+        }
+    }
+    .last-form {
+        @extend .mywebsite-buttons1;
+        padding: 0;
+        @include MediaQuery(phone){
+            top: -29px;
+            text-align: center;  
+        }
+        form {
+            margin-top: 55px;
+            .lsat-form{
+                width: 60%;
+                height: 36px;
+                border-radius: 15px;
+                margin-right: 5px;
+                @include MediaQuery(tablet){
+                    width: 58%;
+                    height: 33px;  
+                }
+            }
+            button {
+                width: 23%;
+                margin-top: 10px;
+                margin-left: 5px;
+                @include MediaQuery(tablet){
+                    width: 27%;  
+                }
+            }
+        }
+    }
+
+}

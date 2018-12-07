@@ -1,0 +1,78 @@
+.foter {
+    @include prefixer(background-size,cover);
+    background-image: url(../img/footer.png);
+    height: 200px;
+    position: relative;
+    .overlay {
+        @include Overlay($overlay-color,.85);
+        z-index: 0;
+    }
+    ul {
+        li {
+            z-index: 5;
+        }
+    }
+    .foot-icon {
+        @extend .website-icon;
+        ul {
+            margin-top: 8%;
+            @include MediaQuery(phone){
+                margin-top: 13%;
+                left: 56%;             
+            }
+            @include MediaQuery(tablet){
+                margin-top: 13%;
+                left: 57%;             
+            }
+            @include MediaQuery(l-desktop){
+                margin-top: 5%;             
+            }
+            li {
+                margin: 0 15px;
+                @include MediaQuery(tablet) {
+                    margin: 0 4px;
+                }
+            }
+        }
+        
+    }
+    .copyright {
+        color: $third-color;
+        position: relative;
+        left: 123%;
+        margin-top: 45%;
+        z-index: 5;
+        @include MediaQuery(phone){
+            left: 37%;
+            margin-top: 41%;             
+        }
+        @include MediaQuery(tablet){
+            left: 76%;
+            margin-top: 40%;             
+        }
+        @include MediaQuery(desktop){
+            left: 95%;
+            margin-top: 34%;             
+        }
+        @include MediaQuery(l-desktop){
+            margin-top: 38%;             
+        }
+    }
+}
+.scroll-top{
+    background-color: $mian-color;
+    display: inline-block;
+    padding: 0 5px 3px;
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    @include prefixer(border,1px solid $third-color);
+    @include prefixer(border-radius,20%);
+    z-index: 200;
+    display: none;
+    i {
+        color: $sacond-color;
+        font-size: 27px;
+        padding-top: 4px;  
+    }
+}

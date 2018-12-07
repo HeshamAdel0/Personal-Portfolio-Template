@@ -1,0 +1,65 @@
+.website-icon{
+        display: flex;
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            @include prefixer(transform,translate(-50%, -50%));
+            li {
+                list-style: none;
+                margin: 0 5px;
+                a {
+                    position: relative;
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 30px;
+                    color: $sacond-color;
+                    @include prefixer(transition,.6s);
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        @include prefixer(transition,.6s);
+                        @include prefixer(transform,scale(.9));
+                        z-index: -5;
+                    }
+                    &:hover {
+                        &:before {
+                            background: $third-color;
+                            @include prefixer(border-radius,50%);
+                            @include prefixer(transform,scale(1.1));
+                            @include prefixer(box-shadow,0 0 15px linear-gradient(90deg, $sacond-color, #a41ee9));
+                        }
+                        @include prefixer(box-shadow,0 0 5px linear-gradient(90deg, $sacond-color, #a41ee9));
+                        @include prefixer(text-shadow,0 0 5px linear-gradient(90deg, $sacond-color, #a41ee9));
+                        .fa-facebook-f {
+                            color: $fb;
+                        }
+                        .fa-twitter {
+                            color: $tw;
+                        }
+                        .fa-instagram {
+                            color: $in;
+                        }
+                        .fa-linkedin {
+                            color: $l-in;
+                        }
+                        .fa-behance {
+                            color: $be;
+                        }
+                        .fa-github {
+                            color: $gt;
+                        }
+                    }
+                }
+            }
+        }   
+}

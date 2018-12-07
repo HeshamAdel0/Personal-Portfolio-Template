@@ -1,0 +1,24 @@
+.my-nav {
+    z-index: 200;
+    background-color: $mian-color;
+    .navbar-brand{
+        color: $sacond-color;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-family: 'Pattaya', sans-serif;;
+    }
+    .navbar-toggler-icon {
+      color: $sacond-color;
+    }
+  }
+  
+  .navbar-nav {
+     font-size: 16px;
+    .nav-link {
+      color: $third-color;
+    }
+    .active > .nav-link,
+    .nav-link:hover{
+        color: $sacond-color;
+    }
+  }

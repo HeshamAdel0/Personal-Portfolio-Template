@@ -1,0 +1,95 @@
+.portfolio {    
+    padding: 39px 0;
+    margin-bottom: 25px;
+    h2 {
+        font-weight: bold;
+        font-size: 35px;
+    }
+    ul {
+        margin-top: 49px;
+        margin-bottom: 39px;
+        li {
+            color: $mian-color;
+            @include prefixer(border,1px solid $mian-color);
+            padding: 8px 20px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            @include prefixer(transition,all .3s ease-in-out);
+            &.active,
+            &:hover {
+                background-color: $sacond-color;
+                @include prefixer(border,1px solid $mian-color);
+                color: $third-color;
+            }
+            &:hover {
+                cursor: pointer;
+            } 
+            
+        }
+        
+    } 
+    .shuffel-imges {
+        .row {
+            margin: 0;
+            .col-md {
+                padding: 0;
+                @include prefixer(transition,all .3s ease-in-out);
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .imge-hover {
+            height: 100%;
+            margin: auto;
+            overflow: hidden;
+            width: 100%;
+            @include prefixer(transition,all 1s ease 0s);
+        }
+        .my-imge {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                @include prefixer(transition,all 0.9s ease 0s);
+            }
+            .mix {
+                display: none
+            }
+        }
+        .imge-hover {
+            &:hover .my-imge img {
+                @include prefixer(transform,scale(1.9));
+            }
+        }
+        .img-text {
+            background-color: rgba(0,0,0,0.7);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: -199px;
+            z-index: 100;
+            display: none;
+            color: $third-color;
+            text-align: center;
+            padding: 50px;
+            h5 {
+                margin-bottom: 30px;
+                text-transform: capitalize;
+            }
+            a {
+                @extend .mywebsite-buttons1;
+                padding: 0;
+                button {
+                    width: 52%;
+                    margin-top: 10px;
+                    margin-right: 20px;
+                    margin-left: 30px;
+                }
+            }
+
+        }
+    }
+}
